@@ -31,7 +31,7 @@ sed -i '/^CXXFLAGS/ s/$/ -D__STDC_NO_ATOMICS__=1/' Makefile
 
 emmake make -j 1 build_generated libssl.a libcrypto.a
 
-mv libcrypto.a ../../lib
-mv libssla ../../lib
+cp libcrypto.a ../../lib
+cp libssl.a ../../lib
 
 cd ..
