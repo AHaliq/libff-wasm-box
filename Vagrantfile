@@ -43,8 +43,8 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "./opt", "~/opt"
-  config.vm.synced_folder "./data", "~/data"
+  config.vm.synced_folder "./opt", "/home/vagrant/opt"
+  config.vm.synced_folder "./data", "/home/vagrant/data"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -64,7 +64,7 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision "shell", path: privileged false, inline: <<-SHELL
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
     cd ~/data
     . ./run.sh
   SHELL
