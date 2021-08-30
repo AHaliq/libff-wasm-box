@@ -63,5 +63,6 @@ cd build
 emcmake cmake .. -DCMAKE_INSTALL_PREFIX=${HOME}/opt -DGMP_LIBRARY=${HOME}/opt/lib/libgmp.a -DGMP_INCLUDE_DIR=${HOME}/opt/src/gmp-6.2.1 -DOPENSSL_CRYPTO_LIBRARY=${HOME}/opt/lib/libcrypto.a -DOPENSSL_INCLUDE_DIR=${HOME}/opt/src/openssl-1.1.1d/include -DOPENSSL_SSL_LIBRARY=${HOME}/opt/lib/libssl.a -DSODIUM_LIBRARY=${HOME}/opt/lib/libsodium.a -DSODIUM_INCLUDE_DIR=${HOME}/opt/src/libsodium/src/libsodium/include -DBoost_INCLUDE_DIR=${HOME}/opt/src/boost_1_64_0 -DBOOST_ROOT=${HOME}/opt/src/boost_1_64_0 -DBoost_SYSTEM_LIBRARY=${HOME}/opt/src/boost_1_64_0/stage/lib/libboost_system.bc
 make install
 cd ../../
+# compile wasm cryptoutils
 
 echo "!!! SUCCESS !!!"
