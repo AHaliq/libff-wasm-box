@@ -33,6 +33,7 @@ git checkout 95673e
 emconfigure ./configure --prefix=${HOME}/opt
 make
 make install
+cd ..
 # install wasm libsodium with emscripten
 
 git clone --recurse-submodules -j8 https://github.com/AHaliq/libff.git
