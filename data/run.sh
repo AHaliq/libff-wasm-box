@@ -40,5 +40,9 @@ git clone --recurse-submodules -j8 https://github.com/AHaliq/libff.git
 cd libff
 mkdir build
 cd build
-emcmake cmake .. -DGMP_LIBRARY=~/opt/lib/libgmp.a -DGMP_INCLUDE_DIR=~/opt/src/gmp-6.2.1 -DOPENSSL_CRYPTO_LIBRARY=~/opt/lib/libcrypto.a -DOPENSSL_INCLUDE_DIR=~/opt/src/openssl-1.1.1d/include -DOPENSSL_SSL_LIBRARY=~/opt/lib/libssl.a -DSODIUM_LIBRARY=~/opt/lib/libsodium.a -DSODIUM_INCLUDE_DIR=~/opt/src/libsodium/src/libsodium/include
+emcmake cmake .. -DCMAKE_INSTALL_PREFIX:PATH=${HOME}/opt -DGMP_LIBRARY=~/opt/lib/libgmp.a -DGMP_INCLUDE_DIR=~/opt/src/gmp-6.2.1 -DOPENSSL_CRYPTO_LIBRARY=~/opt/lib/libcrypto.a -DOPENSSL_INCLUDE_DIR=~/opt/src/openssl-1.1.1d/include -DOPENSSL_SSL_LIBRARY=~/opt/lib/libssl.a -DSODIUM_LIBRARY=~/opt/lib/libsodium.a -DSODIUM_INCLUDE_DIR=~/opt/src/libsodium/src/libsodium/include
+make
+cd ..
 # compile libff with emscripten
+
+echo "!!! SUCCESS !!!"

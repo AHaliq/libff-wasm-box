@@ -5,10 +5,3 @@ in host
 ```
 vagrant up && vagrant ssh 
 ```
-
-in box 
-
-```
-cd /vagrant/data
-. ./run.sh
-```
